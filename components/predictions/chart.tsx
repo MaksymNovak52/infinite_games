@@ -16,9 +16,12 @@ import { CustomTooltip } from "./tooltip";
 export const PredictionChart = () => {
   const averageAccuracy =
     data.reduce((sum, item) => sum + item.accuracy, 0) / data.length;
+
+  const yTicks = Array.from({ length: 10 }, (_, i) => i * 0.1);
+
   return (
     <div
-      className="border  border-[#222]"
+      className="border border-[#222]"
       style={{
         boxShadow: "8px 8px 0px 0px rgba(0, 0, 0, 0.25)",
       }}
@@ -30,32 +33,33 @@ export const PredictionChart = () => {
         </span>
       </div>
 
-      <div className=" w-[747px] ">
-        <LineChart width={747} height={490} data={data}>
+      <div className="py-10 px-4">
+        <LineChart width={750} height={410} data={data}>
           <CartesianGrid vertical={false} color="red" />
           <XAxis
             dataKey="date"
-            tickMargin={10}
+            tickMargin={2}
             axisLine={false}
             strokeWidth={0}
           />
           <YAxis
-            domain={[0, 1]}
-            tickMargin={10}
-            axisLine={false}
+            domain={[0, 0.9]}
+            tickMargin={28}
             strokeWidth={0}
+            ticks={yTicks}
+            tickFormatter={(value) => value.toFixed(1)}
           />
           <Tooltip content={<CustomTooltip />} />
           <Line
             type="monotone"
             dataKey="accuracy"
-            stroke="blue"
-            label={{ position: "bottom", fill: "#8884d8", fontSize: 12 }}
+            stroke="#31C8EA"
+            label={{ position: "bottom", fill: "#31C8EA", fontSize: 12 }}
             dot={{
               r: 2,
-              stroke: "blue",
+              stroke: "#31C8EA",
               strokeWidth: 2,
-              fill: "blue",
+              fill: "#31C8EA",
             }}
             activeDot={{ r: 5 }}
           />
