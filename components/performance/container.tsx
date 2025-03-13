@@ -52,7 +52,7 @@ export function PerformanceContainer(): JSX.Element {
 
   return (
     <div
-      className="w-[1400px] mt-10 bg-[#0E0910] text-white"
+      className="w-[1400px] mx-auto mt-10 bg-[#0E0910] text-white"
       style={{
         boxShadow: "8px 8px 0px 0px rgba(0, 0, 0, 0.25)",
       }}
