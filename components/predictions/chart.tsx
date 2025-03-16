@@ -28,13 +28,18 @@ export const PredictionChart = () => {
     >
       <div className="flex items-center gap-2 h-[30px] bg-[#1F1F1F] px-4">
         <PredicrtionEventIcon />
-        <span className="text-white font-bold uppercase tracking-wider text-sm pt-1">
+        <span className="text-white font-medium uppercase tracking-wider text-[10px]  font-inter">
           Aggregate Score of Events{" "}
         </span>
       </div>
 
-      <div className="py-10 px-4">
-        <LineChart width={750} height={410} data={data}>
+      <div className="pb-10 pl-4">
+        <LineChart
+          width={750}
+          height={450}
+          data={data}
+          margin={{ top: 20, right: 30 }}
+        >
           <CartesianGrid vertical={false} color="red" />
           <XAxis
             dataKey="date"

@@ -27,7 +27,7 @@ export function LeaderboardHeader({
             fill="#F5F5F5"
           />
         </svg>
-        <span className="text-xs font-medium tracking-wider text-white uppercase">
+        <span className="text-xs font-medium tracking-wider font-inter text-white uppercase">
           LEADERBOARD
         </span>
       </div>

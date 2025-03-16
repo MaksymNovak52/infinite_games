@@ -1,3 +1,4 @@
+export * from "./footer-link";
 export * from "./header-link";
 export * from "./performance";
 export * from "./performance-card-icon";

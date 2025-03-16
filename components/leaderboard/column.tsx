@@ -11,7 +11,7 @@ export const LeaderboardColumn = [
   columnHelper.accessor("hotkey", {
     header: "HOTKEY",
     cell: (info) => (
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <span className="mr-2">📋</span>
         <span>{info.getValue()}</span>
       </div>

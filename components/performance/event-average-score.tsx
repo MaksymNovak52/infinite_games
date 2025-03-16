@@ -22,7 +22,7 @@ export const EventAverageScore: React.FC = () => {
   };
 
   return (
-    <div className="flex bg-[#0A0A0A] text-white">
+    <div className="flex  text-white">
       <MarketChart {...eventsChartOptions} />
       <MarketChart {...avgScoreChartOptions} />
     </div>

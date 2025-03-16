@@ -86,7 +86,7 @@ export function LeaderboardTable() {
                   {row.getVisibleCells().map((cell) => (
                     <td
                       key={cell.id}
-                      className="px-3 py-4 text-sm text-gray-700"
+                      className="px-3 py-4 text-[11px] fonr-medium text-gray-700 font-inter"
                     >
                       {flexRender(
                         cell.column.columnDef.cell,

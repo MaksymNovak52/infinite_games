@@ -12,7 +12,7 @@ export function PredictionsList() {
     >
       <div className="mb-4 flex items-center gap-2 h-[30px] bg-[#1F1F1F] px-4">
         <PredicrtionIcon />
-        <span className="text-white font-bold uppercase tracking-wider text-sm">
+        <span className="text-white font-medium uppercase tracking-wider text-[11px] font-inter">
           PREDICTIONS
         </span>
       </div>

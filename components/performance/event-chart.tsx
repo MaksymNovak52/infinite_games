@@ -1,97 +1,28 @@
 "use client";
-import { EVENT_CHART_DATA } from "@/constants";
-import React from "react";
+import { EVENT_CHART_DATA, lineColors } from "@/constants";
 import {
   CartesianGrid,
   Legend,
-  LegendProps,
   Line,
   LineChart,
   Tooltip,
-  TooltipProps,
   XAxis,
   YAxis,
 } from "recharts";
-const lineColors: Record<string, string> = {
-  POLYMARKET: "#00FFFF",
-  EARNINGS: "#800080",
-  CRYPTO: "#FFD700",
-  FRED: "#0000FF",
-  LLN: "#1E90FF",
-  PLMRKT_PRCS: "#FF4500",
-};
-
-const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
-  if (active && payload && payload.length) {
-    return (
-      <div
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          padding: "10px",
-          borderRadius: "5px",
-        }}
-      >
-        <p>{`Date: ${payload[0].payload.date}`}</p>
-        {payload.map((entry, index) => (
-          <p
-            key={index}
-            style={{ color: entry.color }}
-          >{`${entry.name}: ${entry.value}`}</p>
-        ))}
-      </div>
-    );
-  }
-  return null;
-};
-const CustomLegend: React.FC<LegendProps> = ({ payload }) => {
-  if (!payload) return null;
-
-  return (
-    <div className="flex flex-row justify-between items-center mb-2 pl-4">
-      <h3 className="text-white text-[24px] font-medium">
-        Events count by market type
-      </h3>
-
-      <div className="flex flex-row justify-between gap-4 items-center">
-        {payload.map((entry) => (
-          <div
-            key={entry.value}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "5px",
-            }}
-          >
-            <div
-              style={{
-                width: "14px",
-                height: "10px",
-                backgroundColor: entry.color,
-                boxShadow: `0 0 5px ${entry.color}, 0 0 8px ${entry.color}`,
-                filter: `brightness(1.2)`,
-                borderRadius: "2px",
-              }}
-            />
-            <span
-              className="font-normal text-xs"
-              style={{
-                color: "#FFFFFF",
-              }}
-            >
-              {entry.value}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import { CustomEventTooltip, CustomLegend } from "./index";
 
 export const EventChart = () => {
   return (
-    <div className="mx-auto relative ">
-      <LineChart width={1110} height={500} data={EVENT_CHART_DATA}>
+    <div className="mx-auto relative   ">
+      <h3 className="absolute text-[#FFF]/20 text-xs -left-4 top-1/2 -rotate-90  uppercase">
+        AVG Score
+      </h3>
+      <LineChart
+        width={1145}
+        height={500}
+        data={EVENT_CHART_DATA}
+        margin={{ top: 0, right: 40, bottom: 0, left: 0 }}
+      >
         <CartesianGrid vertical={false} />
         <XAxis
           dataKey="date"
@@ -106,8 +37,9 @@ export const EventChart = () => {
           axisLine={false}
           strokeWidth={0}
           tickCount={11}
+          tick={{ fill: "#FFFFFF" }}
         />
-        <Tooltip content={<CustomTooltip />} />
+        <Tooltip content={<CustomEventTooltip />} />
         <Legend
           verticalAlign="top"
           align="right"

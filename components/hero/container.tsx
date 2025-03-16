@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { DigitEffect } from "./index";
+import { ContributeButton, DigitEffect } from "./index";
 
 export function HeroContainer() {
   return (
@@ -17,10 +16,7 @@ export function HeroContainer() {
         <div className="text-8xl font-bold relative ">
           <DigitEffect value="98.01" />
         </div>
-        <button className="uppercase text-sm text-center mt-4 text-white bg-[#1F1F1F] w-[246px] h-[40px] rounded-md flex flex-row items-center justify-center z-[20]  font-bold">
-          contribute your model
-          <Image src="/icon/model.png" alt="arrow" width={35} height={37} />
-        </button>
+        <ContributeButton />
         <div className="absolute bottom-[80px] right-[0px] transform  z-20 -rotate-[10deg]">
           <div className="bg-blue-600 text-white text-sm font-bold rounded flex justify-center  items-center w-[48px] h-[26px]">
             TAO

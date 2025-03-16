@@ -8,10 +8,12 @@ import { PerformanceMineyKeyIcon } from "../icon";
 import {
   EventAverageScore,
   EventChart,
+  EventMinerTable,
   FilterSection,
   PerformanceCards,
   PerformanceHeader,
   SectionTitle,
+  SelectEventChart,
 } from "./index";
 
 export function PerformanceContainer(): JSX.Element {
@@ -77,10 +79,12 @@ export function PerformanceContainer(): JSX.Element {
         subtitle={selectedMiner}
         icon={PerformanceMineyKeyIcon}
       />
-      <div className="w-[1128px] mx-auto">
+      <div className="w-[1128px] mx-auto py-10">
         <PerformanceCards />
         <EventAverageScore />
         <EventChart />
+        <EventMinerTable />
+        <SelectEventChart />
       </div>
     </div>
   );

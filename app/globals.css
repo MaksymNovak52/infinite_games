@@ -35,3 +35,13 @@ table th:nth-child(2),
 table td:nth-child(2) {
   width: 200px;
 }
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -9,8 +9,8 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
     {Icon && <Icon />}
     <div className="h-px bg-gray-800 flex-grow"></div>
     <div className="text-center mx-4">
-      <div className="text-xs text-gray-500 uppercase">{title}</div>
-      <div className="text-xl font-medium mt-1">{subtitle}</div>
+      <div className="text-xs text-gray-500 uppercase font-inter">{title}</div>
+      <div className="text-xl font-medium mt-1 font-mono">{subtitle}</div>
     </div>
     <div className="h-px bg-gray-800 flex-grow"></div>
     {Icon && <Icon />}

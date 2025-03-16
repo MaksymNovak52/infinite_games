@@ -1,7 +1,9 @@
 import {
+  FooterContainer,
   HeaderContainer,
   HeroContainer,
   LeaderBoardContainer,
+  MinerBtn,
   PerformanceContainer,
   PredictionsContainer,
 } from "@/components";
@@ -14,6 +16,9 @@ export default function Home() {
       <LeaderBoardContainer />
       <PredictionsContainer />
       <PerformanceContainer />
+      <MinerBtn title="Become a Miner" />
+
+      <FooterContainer />
     </main>
   );
 }

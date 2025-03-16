@@ -11,7 +11,7 @@ export const MarketChart: React.FC<ChartOptions> = ({
 }) => (
   <div className="w-1/2 p-6 border-r last:border-r-0 border-gray-800">
     <h2
-      className={`text-2xl mb-2 font-medium leading-6 ${
+      className={`text-2xl mb-2 font-medium font-mono leading-6 ${
         alignRight ? "text-right" : ""
       }`}
     >

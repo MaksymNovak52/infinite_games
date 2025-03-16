@@ -39,17 +39,17 @@ export function Dropdown<T extends string>({
 
   return (
     <div className="flex-1 relative" ref={dropdownRef}>
-      <div className="text-xs uppercase mb-2">{label}</div>
+      <div className="text-xs uppercase mb-2 font-inter">{label}</div>
       <div
-        className="bg-[#FFF]/10 border border-[#222] rounded text-xs w-full px-3 py-2 flex justify-between items-center cursor-pointer"
+        className="bg-[#262228] border border-[#222] rounded text-xs w-full px-3 py-2 flex justify-between items-center cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>{getDisplayText()}</span>
+        <span className="">{getDisplayText()}</span>
         <ChevronDown size={14} />
       </div>
 
       {isOpen && (
-        <div className="absolute mt-1 w-full bg-[#FFF]/10 border border-[#222] rounded z-40">
+        <div className="absolute mt-1 w-full bg-[#262228] border border-[#222] rounded z-40">
           {options.map((option, index) => (
             <div
               key={index}

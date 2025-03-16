@@ -48,7 +48,7 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
 
   return (
     <div className="flex-1" ref={calendarRef}>
-      <div className="text-xs uppercase mb-2">DATE RANGE</div>
+      <div className="text-xs uppercase mb-2 font-inter">DATE RANGE</div>
       <div className="flex bg-[#FFF]/10 flex-row items-center">
         <div
           className="border border-[#222] rounded text-xs w-full px-3 py-2 flex items-center cursor-pointer"

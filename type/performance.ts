@@ -44,10 +44,27 @@ interface IDataPointProps {
   LLN: number;
   PLMRKT_PRCS: number;
 }
+
+type EventData = {
+  eventKey: string;
+  marketType: string;
+  eventOutput: number;
+  yourScore: number;
+  avgSubnetScore: number;
+  diff: number;
+  yourEffectiveScore: number;
+  uniqueEvent: string;
+};
+type EventMinerOption = {
+  value: string;
+  label: string;
+};
 export type {
   BarData,
   CardData,
   ChartOptions,
+  EventData,
+  EventMinerOption,
   FilterSectionProps,
   IDataPointProps,
   MarketTypeOption,
