@@ -1,5 +1,4 @@
 import {
-  FooterContainer,
   HeaderContainer,
   HeroContainer,
   LeaderBoardContainer,
@@ -17,8 +16,6 @@ export default function Home() {
       <PredictionsContainer />
       <PerformanceContainer />
       <MinerBtn title="Become a Miner" />
-
-      <FooterContainer />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import { FooterContainer } from "@/components";
 import { Cormorant_Upright, Fira_Code, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
         }}
       >
         <section className="w-[1440px] mx-auto pt-10">{children}</section>
+        <FooterContainer />
       </body>
     </html>
   );
